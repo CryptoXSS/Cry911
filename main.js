@@ -5,7 +5,7 @@ var randomstring = require("randomstring");
 var args = process.argv.slice(2);
 
 randomByte = function() {
-    return Math.round(Math.random()*25006);
+    return Math.round(Math.random()*256);
 }
 
 if (process.argv.length <= 2) {
@@ -56,7 +56,7 @@ var int = setInterval(() => {
             request(options);
     });    
 });
-setTimeout(() => clearInterval(int), time * 10000);
+setTimeout(() => clearInterval(int), time * 1000);
 process.on('uncaughtException', function(err) {
     
 });
