@@ -4,8 +4,10 @@ var randomstring = require("randomstring");
 
 var args = process.argv.slice(2);
 
-randomByte = function() {
-    return Math.round(Math.random()*256);
+function getRandomInt(min, max) {
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
 if (process.argv.length <= 2) {
